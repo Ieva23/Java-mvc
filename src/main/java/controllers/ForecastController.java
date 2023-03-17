@@ -1,6 +1,6 @@
 package controllers;
 
-import com.fasterxml.jackson.databind.node.ArrayNode;
+import models.IndexModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,11 +14,15 @@ public class ForecastController {
     public ModelAndView index() {
         var modelAndView = new ModelAndView("index");
 
+        var indexModel = new IndexModel();
+
         var cities = new ArrayList<String>();
         cities.add("Vilnius");
         cities.add("Kaunas");
 
-        modelAndView.addObject("cities",cities);
+        indexModel.cities = cities;
+
+        modelAndView.addObject("IndexModel",cities);
 
         return modelAndView;
     }
