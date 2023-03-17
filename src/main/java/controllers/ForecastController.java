@@ -19,6 +19,7 @@ public class ForecastController {
         var cities = new ArrayList<String>();
         cities.add("Vilnius");
         cities.add("Kaunas");
+        cities.add("Klaipeda");
 
         indexModel.cities = cities;
 
