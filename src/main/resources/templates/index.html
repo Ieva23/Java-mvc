@@ -10,13 +10,14 @@
         margin-top: 50px;
     }
 </style>
+
 </head>
 <body>
 
 <div class="forecast-block container">
 
-Hello world
-test
+    Hello world
+    test
 <ul th:each="city : ${IndexModel.cities}">
     <li th:text="${city}"></li>
 </ul>

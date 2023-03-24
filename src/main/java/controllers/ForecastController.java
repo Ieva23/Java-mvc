@@ -23,7 +23,7 @@ public class ForecastController {
 
         indexModel.cities = cities;
 
-        modelAndView.addObject("IndexModel",cities);
+        modelAndView.addObject("IndexModel",indexModel);
 
         return modelAndView;
     }
